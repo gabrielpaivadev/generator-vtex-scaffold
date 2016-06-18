@@ -1,0 +1,9 @@
+- var opts = globals[0]
+
+mixin anchor(href, classes)
+    if opts.local
+        a(class!= classes, href= href + '.html')
+            block
+    else
+        a(class!= classes, href= href)
+            block
