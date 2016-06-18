@@ -83,10 +83,10 @@ module.exports = generators.Base.extend({
             tplVars
         );
 
-        this.copy('_babelrc', '.babelrc');
-        this.copy('_editorconfig', '.editorconfig');
-        this.copy('_eslintrc.js', '.eslintrc.js');
-        this.copy('_gitignore', '.gitignore');
+        this.copy('.babelrc', '.babelrc');
+        this.copy('.editorconfig', '.editorconfig');
+        this.copy('.eslintrc.js', '.eslintrc.js');
+        this.copy('.gitignore', '.gitignore');
     },
     install: function () {
         this.npmInstall(packages, { 'saveDev': true });
