@@ -9,25 +9,25 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:vtex="http://www.vtex.com.br/20
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-        title Promax
-        link(rel="stylesheet", href="arquivos/promax.css", type="text/css")/
+        title <%= projectName %>
+        link(rel="stylesheet", href="arquivos/<%= projectCamelCaseName %>.css", type="text/css")/
         link(href='https://fonts.googleapis.com/css?family=Oswald:400,700,300|Droid+Sans', rel='stylesheet', type='text/css')/
 
         if opts.local
             include ../sub-templates/favicons.jade
             script(src="http://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.4.116.612")
         else
-            vtex:template(id="PROMAX-Favicons")/
+            vtex:template(id="<%= projectCamelCaseName %>-Favicons")/
             vtex:metaTags/
 
     body(class='#{bodyClass}')
         if opts.local
             include ../sub-templates/header.jade
         else
-            vtex:template(id="PROMAX-Header")/
+            vtex:template(id="<%= projectCamelCaseName %>-Header")/
         block content
         if opts.local
             include ../sub-templates/footer.jade
         else
-            vtex:template(id="PROMAX-Footer")/
-        script(src="/arquivos/promax.js")
+            vtex:template(id="<%= projectCamelCaseName %>-Footer")/
+        script(src="/arquivos/<%= projectCamelCaseName %>.js")

@@ -3,34 +3,34 @@ var generators = require('yeoman-generator');
 var _ = require('lodash');
 
 var packages = [
-    // "autoprefixer",
-    // "babel-eslint",
-    // "babel-preset-es2015",
-    // "babel-preset-react",
-    // "babel-preset-stage-0",
-    // "babelify",
-    // "browser-sync",
-    // "browserify",
-    // "css-mqpacker",
-    // "cssnano-cli",
-    // "eslint",
-    // "eslint-config-airbnb",
-    // "eslint-plugin-import",
-    // "eslint-plugin-jsx-a11y",
-    // "eslint-plugin-react",
-    // "imagemin-cli",
-    // "includes",
-    // "jade",
-    // "onchange",
-    // "parallelshell",
-    // "postcss-cli",
-    // "postcss-import",
-    // "postcss-mixins",
-    // "postcss-nested",
-    // "postcss-simple-vars",
-    // "svg-sprite-generator",
-    // "svgo",
-    // "uglify-js"
+    "autoprefixer",
+    "babel-eslint",
+    "babel-preset-es2015",
+    "babel-preset-react",
+    "babel-preset-stage-0",
+    "babelify",
+    "browser-sync",
+    "browserify",
+    "css-mqpacker",
+    "cssnano-cli",
+    "eslint",
+    "eslint-config-airbnb",
+    "eslint-plugin-import",
+    "eslint-plugin-jsx-a11y",
+    "eslint-plugin-react",
+    "imagemin-cli",
+    "includes",
+    "jade",
+    "onchange",
+    "parallelshell",
+    "postcss-cli",
+    "postcss-import",
+    "postcss-mixins",
+    "postcss-nested",
+    "postcss-simple-vars",
+    "svg-sprite-generator",
+    "svgo",
+    "uglify-js"
 ];
 
 module.exports = generators.Base.extend({
@@ -54,7 +54,7 @@ module.exports = generators.Base.extend({
             name    : 'author',
             message : 'Project author'
         }]).then(function (answers) {
-            this.projectName = _answers.name;
+            this.projectName = answers.name;
             this.projectCamelCaseName = _.camelCase(answers.name);
             this.projectDescription = answers.description;
             this.projectRepository = answers.repository;

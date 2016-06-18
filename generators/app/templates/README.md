@@ -3,17 +3,8 @@
 Passo 1: Clone este repositório na pasta do projeto.
 
 ```bash
-$ git clone git@bitbucket.org:gtxdev/vtex-fullstack.git __nome-do-projeto__
-$ cd __nome-do-projeto__
-```
-
-Passo 2: Aponte seu repositório local para o repositório do projeto em questão.
-
-```bash
-$ git remote rename origin upstream
-$ git remote add origin URL_DO_NOVO_REPOSITORIO
-$ git commit -m "Commit inicial."
-$ git push origin master
+$ git clone <%= projectRepository %> <%= projectName %>
+$ cd <%= projectName %>
 ```
 
 Passo 3: Instale o projeto.
@@ -54,8 +45,3 @@ $ npm run [script]
 ### Observação
 
 Considere desativar o Eslint, que poderá impedir o build caso o JS não esteja respeitando as regras definidas no `.eslintrc.js`. Para isso, apague o trecho `npm run lint &&` do script `build:js`.
-
-# TODO
-
-+ Adicionar watch de imagens e svg
-+ Atualizar Jade para Pug
