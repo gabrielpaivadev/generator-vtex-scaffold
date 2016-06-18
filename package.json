@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "VTEX project generator based on Jade, PostCSS, BrowserSync, Browserify and other useful packages",
   "files": [
-    "generators/app"
+    "app"
   ],
   "keywords": [
     "yeoman-generator",
