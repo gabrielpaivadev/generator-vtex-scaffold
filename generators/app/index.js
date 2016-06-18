@@ -34,12 +34,19 @@ var packages = [
 ];
 
 module.exports = generators.Base.extend({
+    constructor: function () {
+      generators.Base.apply( this, arguments );
+      this.argument( 'appfolder', { type: String, required: false } );
+    },
+    initializing: function () {
+      this.destinationRoot( this.appfolder );
+    },
     prompting: function () {
         return this.prompt([{
             type    : 'input',
             name    : 'name',
             message : 'Project name',
-            default : this.appname
+            default : this.appfolder || this.appname
         }, {
             type    : 'input',
             name    : 'description',
@@ -55,24 +62,31 @@ module.exports = generators.Base.extend({
             message : 'Project author'
         }]).then(function (answers) {
             this.projectName = answers.name;
-            this.projectCamelCaseName = _.camelCase(answers.name);
+            this.projectKebabName = _.kebabCase(answers.name);
             this.projectDescription = answers.description;
             this.projectRepository = answers.repository;
             this.projectAuthor = answers.author;
         }.bind(this));
     },
     writing: function () {
+        var tplVars = {
+            projectName: this.projectName,
+            projectKebabName: this.projectKebabName,
+            projectDescription: this.projectDescription,
+            projectRepository: this.projectRepository,
+            projectAuthor: this.projectAuthor
+        };
+
         this.fs.copyTpl(
             this.sourceRoot(),
             this.destinationRoot(),
-            {
-                projectName: this.projectName,
-                projectCamelCaseName: this.projectCamelCaseName,
-                projectDescription: this.projectDescription,
-                projectRepository: this.projectRepository,
-                projectAuthor: this.projectAuthor
-            }
+            tplVars
         );
+
+        this.copy('.babelrc', '.babelrc');
+        this.copy('.editorconfig', '.editorconfig');
+        this.copy('.eslintrc.js', '.eslintrc.js');
+        this.copy('.gitignore', '.gitignore');
     },
     install: function () {
         this.npmInstall(packages, { 'saveDev': true });

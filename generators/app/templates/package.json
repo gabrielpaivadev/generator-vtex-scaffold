@@ -1,13 +1,13 @@
 {
-  "name": "<%= projectName %>",
+  "name": "<%= projectKebabName %>",
   "version": "1.0.0",
   "description": "<%= projectDescription %>",
   "scripts": {
-    "postcss": "postcss -c postcss.json && cssnano dist/arquivos/<%= projectCamelCaseName %>.css dist/arquivos/<%= projectCamelCaseName %>.css --safe",
+    "postcss": "postcss -c postcss.json && cssnano dist/arquivos/<%= projectKebabName %>.css dist/arquivos/<%= projectKebabName %>.css --safe",
     "lint": "eslint -c .eslintrc.js dev/js",
-    "uglify": "mkdir -p dist/arquivos && uglifyjs prod/js/*.js -o dist/arquivos/<%= projectCamelCaseName %>.js",
+    "uglify": "mkdir -p dist/arquivos && uglifyjs prod/js/*.js -o dist/arquivos/<%= projectKebabName %>.js",
     "browserify": "mkdir -p prod/js && browserify dev/js/scripts.js -o prod/js/scripts.js -t [ babelify --presets [ es2015 stage-0 react ] ]",
-    "imagemin": "mkdir -p dev/img && imagemin dev/img dist/arquivos -p",
+    "imagemin": "mkdir -p dev/img && imagemin dev/img dist/arquivos",
     "icons": "mkdir -p dev/svg && svgo -f dev/svg && mkdir -p prod/svg && svg-sprite-generate -d dev/svg -o prod/svg/icons.svg",
     "jade": "jade dev/html/templates-de-pagina -P -o dist -O 'jade-local.json'",
     "jade-vtex": "jade dev/html/templates-de-pagina -P -o html-vtex/templates-de-pagina -O 'jade-vtex.json' && jade dev/html/sub-templates -P -o html-vtex/sub-templates -O 'jade-vtex.json' && jade dev/html/templates-de-prateleira -P -o html-vtex/templates-de-prateleira -O 'jade-vtex.json'",
