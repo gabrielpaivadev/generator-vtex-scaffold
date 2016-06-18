@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Base Classes
+   ========================================================================== */
+
+.clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+p { line-height: 1.5; }
+
+body > svg:first-of-type { display: none; }
+
+svg path { fill: inherit; }
+
+.flex { display: flex; }
+
+.transition {
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.unstyled {
+  padding: 0;
+  list-style: none;
+}
+
+.division {}
+
+/* Fixes Firefox anomaly on Lazyloading */
+@-moz-document url-prefix() {
+  img:-moz-loading { visibility: hidden; }
+}
