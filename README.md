@@ -28,3 +28,5 @@ Use `npm run script-name` to run any of these:
 * `watch:js`
 * `watch` (total watch and serve)
 * `serve`
+
+######Made with &hearts; by [GTX Agency](http://www.gtx.ag/)
