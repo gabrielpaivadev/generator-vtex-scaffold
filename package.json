@@ -12,5 +12,19 @@
   "author": "Mauricio Alvim <mauricio.alvim@gtx.ag>",
   "dependencies": {
     "yeoman-generator": "^0.23.4"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvimm/generator-vtex-scaffold.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvimm/generator-vtex-scaffold/issues"
+  },
+  "homepage": "https://github.com/alvimm/generator-vtex-scaffold#readme"
 }
