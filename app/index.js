@@ -28,15 +28,14 @@ var packages = [
     "postcss-mixins",
     "postcss-nested",
     "postcss-simple-vars",
-    "svg-sprite-generator",
     "svgo",
     "uglify-js"
 ];
 
 module.exports = generators.Base.extend({
     constructor: function () {
-      generators.Base.apply( this, arguments );
-      this.argument( 'appfolder', { type: String, required: false } );
+        generators.Base.apply( this, arguments );
+        this.argument( 'appfolder', { type: String, required: false } );
     },
     initializing: function () {
       this.destinationRoot( this.appfolder );
