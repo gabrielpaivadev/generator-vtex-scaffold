@@ -1,6 +1,6 @@
 {
   "name": "generator-vtex-scaffold",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "description": "VTEX project generator based on Jade, PostCSS, BrowserSync, Browserify and others useful packages",
   "keywords": [
     "yeoman-generator",
@@ -18,7 +18,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alvimm/generator-vtex-scaffold.git"
-  },
+  },g
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alvimm/generator-vtex-scaffold/issues"
