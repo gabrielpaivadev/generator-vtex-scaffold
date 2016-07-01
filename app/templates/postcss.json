@@ -1,7 +1,7 @@
 {
   "use": ["postcss-import", "postcss-nested", "postcss-mixins", "postcss-simple-vars", "autoprefixer", "css-mqpacker"],
   "input": "dev/css/style.css",
-  "output": "prod/css/mega-rio.css",
+  "output": "prod/css/<%= projectKebabName %>.css",
   "autoprefixer": {
     "browsers": "last 2 versions"
   }
