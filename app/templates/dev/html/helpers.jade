@@ -7,3 +7,9 @@ mixin anchor(href, classes)
     else
         a(class!= classes, href= href)
             block
+
+mixin vtex-controller(tag)
+    if opts.local
+        block
+    else
+        != tag

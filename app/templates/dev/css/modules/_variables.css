@@ -6,37 +6,30 @@
    Cores
    ========================================================================== */
 
-$base-secondary: #f84e49;
-$base-gray: #8f8f8f;
-$base-gray-alt: #6e6e6e;
-$base-gray-light: #f4f4f4;
-$base-gray-dark: #121212;
-$tipbar-gray: $base-gray-alt;
-$tipbar-pink: #f77874;
-$text-light-bg-dark: #fff;
-$text-dark-bg-light: $base-gray-dark;
-$menu-item-color: $text-light-bg-dark;
-$menu-item-color-hover: $base-secondary;
+$base: #b1cc49;
+$base-gray-dark: #615e56;
+$base-gray: #9c9998;
+$base-gray-light: #c7c7c7;
 
 /*
    Fontes
    ========================================================================== */
 
-$font-base: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-serif: 'Lora', Georgia, Times, 'Times New Roman', serif;
+$font-base: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-sec: 'Istok Web', Georgia, Times, 'Times New Roman', serif;
 
 /*
    Breakpoints
    ========================================================================== */
 
 $screen-xs: 480px;
-$screen-xs-min: $screen-xs;
+$screen-xs-min: 480px;
 $screen-sm: 768px;
-$screen-sm-min: $screen-sm;
+$screen-sm-min: 768px;
 $screen-md: 992px;
-$screen-md-min: $screen-md;
+$screen-md-min: 992px;
 $screen-lg: 1200px;
-$screen-lg-min: $screen-lg;
-$screen-xs-max: ($screen-sm - 1);
-$screen-sm-max: ($screen-md - 1);
-$screen-md-max: ($screen-lg - 1);
+$screen-lg-min: 1200px;
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;
