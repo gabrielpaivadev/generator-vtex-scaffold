@@ -1,9 +1,19 @@
 - var opts = globals[0]
 
-mixin anchor(href, classes)
+mixin anchor(localHref, href)
     if opts.local
-        a(class!= classes, href= href + '.html')
-            block
+        if (localHref.indexOf('javascript:void(0);') > -1)
+            a(class!= attributes.class, title!= attributes.title, href= localHref)
+                block
+        else
+            a(class!= attributes.class, title!= attributes.title, href= localHref + '.html')
+                block
     else
-        a(class!= classes, href= href)
+        a(class!= attributes.class, title!= attributes.title, href= href)
             block
+
+mixin vtex-controller(tag)
+    if opts.local
+        block
+    else
+        != tag
