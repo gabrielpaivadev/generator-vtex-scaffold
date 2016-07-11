@@ -33,11 +33,3 @@
   font-size: calc($(sizeValue) * 10px);
   font-size: $(sizeValue)rem;
 }
-
-@define-mixin make-grid $class {
-  @mixin float-grid-columns $class;
-  @mixin loop-grid-columns $grid-columns, $class, width;
-  @mixin loop-grid-columns $grid-columns, $class, pull;
-  @mixin loop-grid-columns $grid-columns, $class, push;
-  @mixin loop-grid-columns $grid-columns, $class, offset;
-}
