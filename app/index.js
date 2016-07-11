@@ -19,7 +19,6 @@ var packages = [
     "eslint-plugin-jsx-a11y",
     "eslint-plugin-react",
     "imagemin-cli",
-    "includes",
     "jade",
     "onchange",
     "parallelshell",
@@ -28,6 +27,9 @@ var packages = [
     "postcss-mixins",
     "postcss-nested",
     "postcss-simple-vars",
+    "react",
+    "react-addons-css-transition-group",
+    "react-dom",
     "svgo",
     "uglify-js"
 ];
