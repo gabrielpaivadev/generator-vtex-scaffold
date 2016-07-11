@@ -1,4 +1,5 @@
 - var bodyClass = ''
+- var pageTitle = ''
 
 include ../helpers.jade
 
@@ -9,11 +10,11 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:vtex="http://www.vtex.com.br/20
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-        title <%= projectName %>
-        link(rel="stylesheet", href="arquivos/<%= projectKebabName %>.css", type="text/css")/
         link(href='https://fonts.googleapis.com/css?family=Oswald:400,700,300|Droid+Sans', rel='stylesheet', type='text/css')/
+        link(href="arquivos/<%= projectKebabName %>.css", rel="stylesheet", type="text/css")/
 
         if opts.local
+            title <%= projectName %> #{pageTitle}
             include ../sub-templates/favicons.jade
             script(src="http://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.4.116.612")
         else
@@ -25,9 +26,14 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:vtex="http://www.vtex.com.br/20
             include ../sub-templates/header.jade
         else
             vtex:template(id="<%= projectKebabName %>-Header")/
+
         block content
+
         if opts.local
             include ../sub-templates/footer.jade
         else
             vtex:template(id="<%= projectKebabName %>-Footer")/
+
+        block scripts
+
         script(src="/arquivos/<%= projectKebabName %>.js")

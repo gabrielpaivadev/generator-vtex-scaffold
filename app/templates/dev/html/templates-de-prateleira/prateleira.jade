@@ -1,0 +1,59 @@
+include ../helpers.jade
+
+if opts.local
+    - var title = 'Nome do produto'
+    - var href = '/product.html'
+    - var dataProductId = '1'
+    - var listPrice = 'R$ 5,00'
+    - var bestPrice = 'R$ 2,80'
+    - var getImageTag = '<img src="https://placehold.it/300x300/f1f1f1/821f32" width="300" height="300" />'
+    - var getImageTag2 = '<img src="https://placehold.it/300x300/26272B/f1f1f1" width="300" height="300" />'
+else
+    - var title = '$product.HtmlEscapedName'
+    - var href = '$product.Uri'
+    - var dataProductId = '$product.Id'
+    - var listPrice = '$product.ListPrice'
+    - var bestPrice = '$product.BestPrice'
+    - var getImageTag = '$product.GetImageTag(300, 300)'
+    - var getImageTag2 = '$product.GetImageTag(300, 300, "verso")'
+.shelf-product(data-product-id= dataProductId)
+    figure.shelf-product__main-info.flex
+        a.shelf-product__anchor.shelf-product__anchor--img(href= href)
+            != getImageTag
+        figcaption.shelf-product__text-info.hidden-b2b
+            h3.shelf-product__title
+                a.shelf-product__anchor(href= href)= title
+            p.shelf-product__prices
+                if opts.local
+                    span.shelf-product__old-price de:
+                        span= listPrice
+                    span.shelf-product__actual-price por:
+                        span= bestPrice
+                else
+                    != '\n#if ($product.HasBestPrice)'
+                    != '\n    <span class="shelf-product__old-price">'
+                    != '\n        ' + listPrice
+                    != '\n    </span>'
+                    != '\n    <span class="shelf-product__actual-price">'
+                    != '\n        ' + bestPrice
+                    != '\n    </span>'
+                    != '\n#else'
+                    != '\n    <span class="shelf-product__actual-price">'
+                    != '\n        ' + bestPrice
+                    != '\n    </span>'
+                    != '\n#end'
+
+                if opts.local
+                    span.shelf-product__parcels ou 2X de
+                        span R$ 1,40
+                        | sem juros
+                else
+                    != '\n#if ($product.NumbersOfInstallment > 1)'
+                    != '\n    <span class="shelf-product__parcels">'
+                    != '\n        ou ${product.NumbersOfInstallment}X de'
+                    != '\n        <span>${product.Installmentvalue}</span>'
+                    != '\n        sem juros'
+                    != '\n    </span>'
+                    != '\n#end\n'
+
+            a.shelf-product__anchor(href= href)= Comprar
