@@ -19,8 +19,9 @@
     "build": "npm run build:images && npm run build:html && npm run build:css && npm run build:js",
     "watch:css": "onchange 'dev/css/**/*.css' -- npm run build:css",
     "watch:js": "onchange 'dev/js/**/*.js' -- npm run build:js",
+    "watch:img": "onchange 'dev/{img,svg}/**/*.{jpg,png,svg}' -- npm run build:images",
     "watch:html": "onchange 'dev/html/**/*.jade' -- npm run build:html",
-    "watch": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:js'",
+    "watch": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:js' 'npm run watch:img'",
     "start": "npm run build && npm run watch",
     "postinstall": "npm run build && npm run watch"
   },

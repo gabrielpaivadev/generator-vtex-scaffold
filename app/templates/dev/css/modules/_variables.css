@@ -6,30 +6,26 @@
    Cores
    ========================================================================== */
 
-$base: #b1cc49;
-$base-gray-dark: #615e56;
-$base-gray: #9c9998;
-$base-gray-light: #c7c7c7;
+/**/
 
 /*
    Fontes
    ========================================================================== */
 
-$font-base: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-sec: 'Istok Web', Georgia, Times, 'Times New Roman', serif;
+/**/
 
 /*
    Breakpoints
    ========================================================================== */
 
 $screen-xs: 480px;
-$screen-xs-min: 480px;
+$screen-xs-min: $screen-xs;
 $screen-sm: 768px;
-$screen-sm-min: 768px;
+$screen-sm-min: $screen-sm;
 $screen-md: 992px;
-$screen-md-min: 992px;
+$screen-md-min: $screen-md;
 $screen-lg: 1200px;
-$screen-lg-min: 1200px;
+$screen-lg-min: $screen-lg;
 $screen-xs-max: 767px;
 $screen-sm-max: 991px;
 $screen-md-max: 1199px;
