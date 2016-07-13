@@ -98,6 +98,12 @@ module.exports = generators.Base.extend({
   install: function () {
     this.npmInstall(packages, { 'saveDev': true });
   },
+  removeFiles: function () {
+    this.fs.delete('_babelrc')
+    this.fs.delete('_editorconfig')
+    this.fs.delete('_eslintrc.js')
+    this.fs.delete('_gitignore')
+  },
   paths: function () {
 
   },
