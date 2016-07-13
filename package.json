@@ -16,7 +16,7 @@
       "email": "guiilhermemarconi@gmail.com",
       "url": "http://guilhermemarconi.me"
     }
-  ]
+  ],
   "dependencies": {
     "yeoman-generator": "^0.23.4"
   },
