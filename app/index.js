@@ -70,8 +70,8 @@ module.exports = generators.Base.extend({
       this.projectKebabName = _.kebabCase(answers.name);
       this.projectDescription = answers.description;
       this.projectRepository = answers.repository;
-      this.projectAuthor = answers.authorName;
-      this.projectEmail = answers.authorEmail;
+      this.projectAuthorName = answers.authorName;
+      this.projectAuthorEmail = answers.authorEmail;
     }.bind(this));
   },
   writing: function () {
