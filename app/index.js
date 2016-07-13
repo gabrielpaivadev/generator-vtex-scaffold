@@ -71,7 +71,7 @@ module.exports = generators.Base.extend({
       this.projectDescription = answers.description;
       this.projectRepository = answers.repository;
       this.projectAuthor = answers.authorName;
-      this.projectAuthor = answers.authorEmail;
+      this.projectEmail = answers.authorEmail;
     }.bind(this));
   },
   writing: function () {
