@@ -7,13 +7,13 @@ $ git clone <%= projectRepository %> <%= projectName %>
 $ cd <%= projectName %>
 ```
 
-Passo 3: Instale o projeto.
+Passo 2: Instale o projeto.
 
 ```bash
 $ npm i
 ```
 
-Caso hajam dúvidas, consulte os scripts disponívels no arquivo `package.json` e execute-os com o comando.
+Caso hajam dúvidas, consulte os scripts disponívels no arquivo `package.json` e execute-os com o comando:
 
 ```bash
 $ npm run [script]
@@ -27,7 +27,8 @@ $ npm run [script]
 + UglifyJS
 + Jade Template Engine
 + Browser-Sync
-+ *SVGO* e *SVG Sprite Generate*
++ SVGO
++ React para manipulação do DOM em aplicações específicas
 
 ## Scripts
 
@@ -38,10 +39,11 @@ $ npm run [script]
 + `build` (para build total)
 + `watch:css`
 + `watch:js`
++ `watch:img`
 + `watch:html`
-+ `watch` (para watch total e servir arquivos)
++ `start` (para watch total e servir arquivos) -> nesse caso, em específico, usa-se o comando `npm start`
 + `serve`
 
 ### Observação
 
-Considere desativar o Eslint, que poderá impedir o build caso o JS não esteja respeitando as regras definidas no `.eslintrc.js`. Para isso, apague o trecho `npm run lint &&` do script `build:js`.
+O Eslint, por padrão, vem inativado, pois pode impedir o build caso o JS não esteja respeitando as regras definidas no `.eslintrc.js`. Para habilitá-lo, insira o trecho `npm run lint && ` no início do script `build:js`.
