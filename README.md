@@ -8,7 +8,6 @@ Yeoman generator that scaffolds out a VTEX project using NPM Scripts as build to
 * Built-in preview server with BrowserSync
 * Lint your scripts with ESLint
 * Image and SVG optimization
-* SVG Sprites Generator
 * Jade Template Engine and VTEX specific mixins
 
 ##Getting Started
@@ -22,11 +21,13 @@ Use `npm run script-name` to run any of these:
 * `build:html`
 * `build:css `
 * `build:js`
+* `build:images`
 * `build` (total build)
 * `watch:html`
 * `watch:css`
 * `watch:js`
-* `watch` (total watch and serve)
+* `watch:img`
 * `serve`
+* `start` (total watch and serve) -> in this unique case, run with `npm start`
 
-######Made with &hearts; by [GTX Agency](http://www.gtx.ag/)
+######Made with :heart: by [GTX Agency](http://www.gtx.ag/)
