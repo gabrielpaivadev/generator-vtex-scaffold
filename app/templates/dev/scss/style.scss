@@ -1,14 +1,14 @@
-/*
-   Dependencies
-   ========================================================================== */
+//
+// Dependencies
+// ==========================================================================
 
-@import "modules/_all.css";
-@import "partials/_all.css";
-@import "vendor/_all.css";
+@import "modules/all";
+@import "partials/all";
+@import "vendor/all";
 
-/*
-   Base Style
-   ========================================================================== */
+//
+// Base Style
+// ==========================================================================
 
 @media (min-width: $screen-sm) {
   *:focus { outline: none !important; }
@@ -17,6 +17,7 @@
 html {
   min-height: 100%;
   box-sizing: border-box;
+  font-family: $f-default;
   font-size: 10px;
   font-smooth: always;
   text-rendering: optimizeLegibility;
@@ -51,14 +52,14 @@ img[data-original] {
   height: auto;
 }
 
-/* Back to Top
-   ========================================================================== */
+// Back to Top
+// ==========================================================================
 
 .back-to-top {}
 
-/*
-   AJAX
-   ========================================================================== */
+//
+// AJAX
+// ==========================================================================
 
 #ajaxBusy {
   display: none !important;

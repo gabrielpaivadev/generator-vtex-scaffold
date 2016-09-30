@@ -257,7 +257,7 @@ html {
 
 body {
   padding-bottom: 0 !important;
-  font-family: $font-base;
+  font-family: $f-default;
 }
 
 .clearfix {
@@ -283,7 +283,7 @@ fieldset {
   margin-left: -20px;
   padding: 20px 0;
   width: calc(100% + 40px);
-  background: $base-gray-dark;
+  // background: $base-gray-dark;
 
   .container {
     @media (min-width: $screen-sm) {
@@ -323,7 +323,7 @@ fieldset {
   box-sizing: border-box;
   margin-top: 10px;
   padding: 30px 20px 0 20px;
-  background: $base-gray-dark;
+  // background: $base-gray-dark;
   color: #fff;
 
   @media (max-width: 490px) {
@@ -450,7 +450,7 @@ fieldset {
   }
 
   .bottom-footer {
-    /* @mixin font-size 1.2; */
+    /* @include font-size(1.2); */
     margin-left: -20px;
     padding-top: 10px;
     width: calc(100% + 40px);

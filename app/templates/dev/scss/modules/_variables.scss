@@ -1,0 +1,31 @@
+// ==========================================================================
+// Variáveis
+// ==========================================================================
+
+//
+// Cores
+// ==========================================================================
+
+$c-black: #000;
+
+//
+// Fontes
+// ==========================================================================
+
+$f-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+//
+// Breakpoints
+// ==========================================================================
+
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;
