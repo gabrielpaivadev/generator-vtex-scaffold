@@ -1,0 +1,83 @@
+// scss-lint:disable all
+
+/**
+ * EasyZoom core styles
+ */
+.easyzoom {
+  position: relative;
+
+  /* 'Shrink-wrap' the element */
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.easyzoom img { vertical-align: bottom; }
+
+.easyzoom.is-loading img { cursor: progress; }
+
+.easyzoom.is-ready img { cursor: crosshair; }
+
+.easyzoom.is-error img { cursor: not-allowed; }
+
+.easyzoom-notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 0;
+  /*line-height: 2em;*/
+  text-align: center;
+  background: rgba(white, .75);
+  /*box-shadow: 0 0 10px #888;*/
+}
+
+.easyzoom-flyout {
+  position: absolute;
+  z-index: 900;
+  overflow: hidden;
+  background: #fff;
+}
+
+.slide-loading {
+  .easyzoom:not(.is-ready):hover & { display: block; }
+
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  z-index: 99999;
+  display: none;
+  width: 60px;
+  height: 60px;
+  // background: transparent url('/arquivos/v-footer.png') center no-repeat;
+  animation: rotate .7s linear infinite;
+}
+
+/**
+ * EasyZoom layout variations
+ */
+.easyzoom--overlay .easyzoom-flyout {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.easyzoom--adjacent .easyzoom-flyout {
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+}
+
+
+/**
+ * Hide jqZoom elements
+ */
+.zoomPup,
+.zoomWindow,
+.zoomPreload { display: none !important; }
