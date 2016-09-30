@@ -17,14 +17,14 @@
   #{$parent} { display: none !important; }
 }
 
-@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
-  $at1x_path: "#{$path}.#{$ext}";
-  $at2x_path: "#{$path}@2x.#{$ext}";
+@mixin at2x($path, $ext: 'jpg', $w: auto, $h: auto) {
+  $at1x_path: '#{$path}.#{$ext}';
+  $at2x_path: '#{$path}@2x.#{$ext}';
 
-  background-image: url("/arquivos/#{$at1x_path}");
+  background-image: url('/arquivos/#{$at1x_path}');
 
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi) {
-    background-image: url("/arquivos/#{$at2x_path}");
+    background-image: url('/arquivos/#{$at2x_path}');
     background-size: $w $h;
   }
 }
