@@ -1,16 +1,16 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
-@import "modules/normalize";
-@import "modules/variables";
-@import "modules/mixins";
-@import "modules/responsive-utilities";
+@import 'modules/normalize';
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/responsive-utilities';
 
 /* ==========================================================================
    Shopping Cart
    ========================================================================== */
 
 @media (min-width: 1200px) {
-  @import "http://fonts.googleapis.com/css?family=Oswald:400,300";
+  @import 'http://fonts.googleapis.com/css?family=Oswald:400,300';
   .container {
     width: 1170px;
     padding: 20px 0;
@@ -222,7 +222,7 @@
   #header h1{
     float: right;
     margin: 3px 0 0;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-size: 25px;
     width: 93px;
     height: 26px;
@@ -265,7 +265,7 @@ body {
 
   &:before,
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
   }
 
@@ -470,7 +470,7 @@ fieldset {
     font-size: 0px !important;
 
     &::after {
-      content: "Produto indisponível no momento.";
+      content: 'Produto indisponível no momento.';
       font-size: 14px;
     }
   }
