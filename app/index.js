@@ -11,27 +11,24 @@ var packages = [
   "babelify",
   "browser-sync",
   "browserify",
-  "css-mqpacker",
-  "cssnano-cli",
   "eslint",
   "eslint-config-airbnb",
   "eslint-plugin-import",
   "eslint-plugin-jsx-a11y",
   "eslint-plugin-react",
+  "hamburgers",
   "imagemin-cli",
   "jade",
+  "node-sass",
   "onchange",
   "parallelshell",
   "postcss-cli",
-  "postcss-import",
-  "postcss-mixins",
-  "postcss-nested",
-  "postcss-simple-vars",
   "react",
-  "react-addons-css-transition-group",
   "react-dom",
   "svgo",
-  "uglify-js"
+  "sweetalert",
+  "uglify-js",
+  "vanilla-lazyload"
 ];
 
 module.exports = generators.Base.extend({
@@ -103,11 +100,5 @@ module.exports = generators.Base.extend({
     this.fs.delete('_editorconfig')
     this.fs.delete('_eslintrc.js')
     this.fs.delete('_gitignore')
-  },
-  paths: function () {
-
-  },
-  method1: function () {
-    this.log(this.projectname);
   }
 });

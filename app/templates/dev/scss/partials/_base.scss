@@ -1,6 +1,6 @@
-/* ==========================================================================
-   Base Classes
-   ========================================================================== */
+// ==========================================================================
+// Base Classes
+// ==========================================================================
 
 .clearfix {
   *zoom: 1;
@@ -41,7 +41,7 @@ svg path { fill: inherit; }
 
 .division {}
 
-/* Fixes Firefox anomaly on Lazyloading */
+// Fixes Firefox anomaly on Lazyloading
 @-moz-document url-prefix() {
   img:-moz-loading { visibility: hidden; }
 }

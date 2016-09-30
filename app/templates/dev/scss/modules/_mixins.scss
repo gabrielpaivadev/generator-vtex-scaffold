@@ -1,0 +1,35 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+@mixin responsive-visibility($parent) {
+  #{$parent} { display: block !important; }
+
+  table#{$parent} { display: table; }
+
+  tr#{$parent} { display: table-row !important; }
+
+  th#{$parent},
+  td#{$parent} { display: table-cell !important; }
+}
+
+@mixin responsive-invisibility($parent) {
+  #{$parent} { display: none !important; }
+}
+
+@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("/arquivos/#{$at1x_path}");
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi) {
+    background-image: url("/arquivos/#{$at2x_path}");
+    background-size: $w $h;
+  }
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}

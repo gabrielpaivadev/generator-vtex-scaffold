@@ -7,33 +7,33 @@ block vars
 
 doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
 html(xmlns="http://www.w3.org/1999/xhtml", xmlns:vtex="http://www.vtex.com.br/2009/vtex-common", xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce", lang="pt-br")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-        link(href='https://fonts.googleapis.com/css?family=Oswald:400,700,300|Droid+Sans', rel='stylesheet', type='text/css')/
-        link(href="arquivos/<%= projectKebabName %>.css", rel="stylesheet", type="text/css")/
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(href='https://fonts.googleapis.com/css?family=Oswald:400,700,300|Droid+Sans', rel='stylesheet', type='text/css')/
+    link(href="arquivos/<%= projectKebabName %>.css", rel="stylesheet", type="text/css")/
 
-        if opts.local
-            title <%= projectName %> #{pageTitle}
-            include ../sub-templates/favicons.jade
-            script(src="http://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.4.116.612")
-        else
-            vtex:template(id="<%= projectKebabName %>-Favicons")/
-            vtex:metaTags/
+    if opts.local
+      title <%= projectName %> #{pageTitle}
+      include ../sub-templates/favicons.jade
+      script(src="http://io.vtex.com.br/front-libs/jquery/1.8.3/jquery-1.8.3.min.js?v=1.4.116.612")
+    else
+      vtex:template(id="<%= projectKebabName %>-Favicons")/
+      vtex:metaTags/
 
-    body(class='#{bodyClass}')
-        if opts.local
-            include ../sub-templates/header.jade
-        else
-            vtex:template(id="<%= projectKebabName %>-Header")/
+  body(class='#{bodyClass}')
+    if opts.local
+      include ../sub-templates/header.jade
+    else
+      vtex:template(id="<%= projectKebabName %>-Header")/
 
-        block content
+    block content
 
-        if opts.local
-            include ../sub-templates/footer.jade
-        else
-            vtex:template(id="<%= projectKebabName %>-Footer")/
+    if opts.local
+      include ../sub-templates/footer.jade
+    else
+      vtex:template(id="<%= projectKebabName %>-Footer")/
 
-        block scripts
+    block scripts
 
-        script(src="/arquivos/<%= projectKebabName %>.js")
+    script(src="/arquivos/<%= projectKebabName %>.js")

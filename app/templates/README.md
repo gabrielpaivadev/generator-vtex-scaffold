@@ -21,7 +21,7 @@ $ npm run [script]
 
 ## Conteúdo
 
-+ PostCSS
++ Node Sass
 + ESLint
 + *Browserify* usado com o transform *Babelify* [ presets: es2015, stage-0 e react ]
 + UglifyJS
@@ -41,8 +41,8 @@ $ npm run [script]
 + `watch:js`
 + `watch:img`
 + `watch:html`
-+ `start` (para watch total e servir arquivos) -> nesse caso, em específico, usa-se o comando `npm start`
 + `serve`
++ `start` (para watch total e servir arquivos) -> nesse caso, em específico, usa-se o comando `npm start`
 
 ### Observação
 

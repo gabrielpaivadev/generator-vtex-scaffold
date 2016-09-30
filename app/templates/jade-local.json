@@ -1,5 +1,5 @@
 {
-    "globals": [{
-        "local": true
-    }]
+  "globals": [{
+    "local": true
+  }]
 }

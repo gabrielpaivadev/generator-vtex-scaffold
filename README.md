@@ -4,7 +4,7 @@ Yeoman generator that scaffolds out a VTEX project using NPM Scripts as build to
 
 ##Features
 * ES2015 and JSX using Browserify and Babel
-* Many PostCSS plugins
+* Node Sass
 * Built-in preview server with BrowserSync
 * Lint your scripts with ESLint
 * Image and SVG optimization
@@ -19,15 +19,15 @@ Yeoman generator that scaffolds out a VTEX project using NPM Scripts as build to
 ##Available scripts
 Use `npm run script-name` to run any of these:
 * `build:html`
-* `build:css `
+* `build:css`
 * `build:js`
 * `build:images`
-* `build` (total build)
+* `build` (runs all build tasks above)
 * `watch:html`
 * `watch:css`
 * `watch:js`
 * `watch:img`
 * `serve`
-* `start` (total watch and serve) -> in this unique case, run with `npm start`
+* `start` (runs build tasks and then runs watch tasks and serve) -> in this unique case, run with `npm start`
 
 ######Made with :heart: by [GTX Agency](http://www.gtx.ag/)
