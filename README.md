@@ -30,4 +30,4 @@ Use `npm run script-name` to run any of these:
 * `serve`
 * `start` (runs build tasks and then runs watch tasks and serve) -> in this unique case, run with `npm start`
 
-###### Made with  :heart:  by [GTX Agency](http://www.gtx.ag/)
+###### Made with :heart: by [GTX Agency](http://www.gtx.ag/)
